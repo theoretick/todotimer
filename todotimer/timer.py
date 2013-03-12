@@ -4,17 +4,17 @@
 #
 
 def timer(taskname, timeslot='break'):
-    """ todotimer's timer function for tasks and breaks
-        - takes taskname and timeslot category as args.
-        - uses timeslot to determine notification call.
+    """ timer function for tasks & breaks
+        - takes taskname and timeslot category as args
+        - uses timeslot to determine notification call
         - calls pyNotificationCenter for notifications
     """
     from todotimer import pyNotificationCenter
+    from todotimer.config import TASKLENGTH
+    from todotimer.config import BREAKLENGTH
     import time
 
     ########## init variables
-    TASKLENGTH = 15
-    BREAKLENGTH = 10
     tasktext = "Starting {} min counter".format(TASKLENGTH)
     endtext = """
         Congrats, you're done for today"""
