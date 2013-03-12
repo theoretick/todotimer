@@ -3,7 +3,7 @@
 # name: todotimer.py
 # auth: lucas c
 # url: http://github.com/theoretick
-# desc: simple pomodoro-style configurable todo timer
+# desc: v1.1 simple pomodoro-style configurable todo timer
 ##################################################
 # - reads todo.txt
 # - per line from infile, assigns session time for task
@@ -25,8 +25,8 @@
 ##################################################
 
 ########## config vars
-TASKLENGTH = 25
-BREAKLENGTH = 5
+TASKLENGTH = 15
+BREAKLENGTH = 10
 
 def timer(taskname, timeslot='break'):
         """
