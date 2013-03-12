@@ -25,7 +25,7 @@
 ##################################################
 
 
-from lib import timer
+from todotimer.timer import timer
 
 if __name__=="__main__":
     try:
@@ -35,9 +35,9 @@ if __name__=="__main__":
         raise InputError, "Error, no todo.txt found"
         exit()
     while inputline:
-        timer.timer(inputline, 'task')
+        timer(inputline, 'task')
         inputline = infile.readline()
         if inputline:
-            timer.timer(inputline, 'break')
+            timer(inputline, 'break')
     infile.close()
-    timer.timer('Done!','end')
+    timer('Done!','end')
