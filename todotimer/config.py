@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# config settings constants for todotimer
-##########
+# config settings for todotimer
+####################
 
 # todo.txt filepath
 FILEPATH = 'todo.txt'
@@ -12,11 +12,11 @@ TASKLENGTH = 15
 # specify the length of a break (default 5)
 BREAKLENGTH = 10
 
-#########
+####################
 # Advanced features
 #
-# CURRENTLY NONE IMPLEMENTED.
-#########
+# CURRENTLY NONE IMPLEMENTED
+####################
 
 # Support for context in todo lists (i.e. @home or @work)
 TAGSUPPORT = False
