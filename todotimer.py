@@ -18,9 +18,7 @@
 #       i.e. iCloud, evernote, dropbox, etc.
 ##################################################
 # fix:
-# - no break at end of session
 # - better format break, bold "up next?"
-# - consider: wait and then call notify instantly?
 # - should break/task be separate functions?
 ##################################################
 
@@ -35,6 +33,7 @@ if __name__=="__main__":
     except:
         raise InputError, "Error, no todo.txt found"
         exit()
+
     while inputline:
         timer(inputline, 'task')
         inputline = infile.readline()
