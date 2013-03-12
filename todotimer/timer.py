@@ -5,9 +5,8 @@
 
 def timer(taskname, timeslot='break'):
     """ timer function for tasks & breaks
-        - takes taskname and timeslot category as args
         - uses timeslot to determine notification call
-        - calls pyNotificationCenter for notifications
+        - notifies via pyNotificationCenter
     """
     from todotimer import pyNotificationCenter
     from todotimer.config import TASKLENGTH
