@@ -3,7 +3,7 @@
 # name: todotimer.py
 # auth: lucas c
 # url: http://github.com/theoretick
-# desc: simple pomodoro-style configurable todo timer
+# desc: v1.0 - simple pomodoro-style configurable todo timer
 ##################################################
 # - reads todo.txt
 # - per line from infile, assigns session time for task
@@ -11,17 +11,6 @@
 # - notifies start
 # - notifies break
 # - rinse, repeat
-# - FUTURE - keep logs
-# - FUTURE - tag support
-# - FUTURE - parse filename for matching date (ex todo2mar2012.txt)
-# - FUTURE - pull todo from XXXXX?? cool!
-#		i.e. iCloud, evernote, dropbox, etc.
-##################################################
-# fix:
-# - no break at end of session
-# - better format break, bold "up next?"
-# - consider: wait and then call notify instantly?
-# - should break/task be separate functions?
 ##################################################
 
 ########## config vars
