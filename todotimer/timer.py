@@ -9,7 +9,7 @@ def timer(taskname, timeslot='break'):
         - uses timeslot to determine notification call.
         - calls pyNotificationCenter for notifications
     """
-    import pyNotificationCenter
+    from todotimer import pyNotificationCenter
     import time
 
     ########## init variables
