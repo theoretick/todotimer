@@ -26,10 +26,11 @@
 
 
 from todotimer.timer import timer
+from todotimer.config import FILEPATH
 
 if __name__=="__main__":
     try:
-        infile = open('todo.txt','r')
+        infile = open(FILEPATH)
         inputline = infile.readline()
     except:
         raise InputError, "Error, no todo.txt found"

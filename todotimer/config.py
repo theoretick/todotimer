@@ -3,6 +3,9 @@
 # config settings constants for todotimer
 ##########
 
+# todo.txt filepath
+FILEPATH = 'todo.txt'
+
 # specify the length of a task session (default 25)
 TASKLENGTH = 15
 
