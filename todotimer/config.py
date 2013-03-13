@@ -7,10 +7,10 @@
 FILEPATH = 'todo.txt'
 
 # specify the length of a task session (default 25)
-TASKLENGTH = 15
+TASKLENGTH = 25
 
 # specify the length of a break (default 5)
-BREAKLENGTH = 10
+BREAKLENGTH = 5
 
 ####################
 # Advanced features

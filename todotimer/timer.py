@@ -21,8 +21,8 @@ def timer(taskname, timeslot='break'):
         Finished session, take a {} minute break.\n
         Up next: {}"
         """.format(BREAKLENGTH, taskname)
-    tasktime = TASKLENGTH #* 60
-    breaktime = BREAKLENGTH #* 60
+    tasktime = TASKLENGTH * 60
+    breaktime = BREAKLENGTH * 60
     ########## run notification loops based on timeslot (task, end, or break)
     if timeslot == 'task':
         pyNotificationCenter.notify(taskname, tasktext)
