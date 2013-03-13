@@ -22,7 +22,6 @@
 # - should break/task be separate functions?
 ##################################################
 
-
 from todotimer.timer import timer
 from todotimer.config import FILEPATH
 
@@ -40,4 +39,4 @@ if __name__=="__main__":
         if inputline:
             timer(inputline, 'break')
     infile.close()
-    timer('Done!','end')
+    timer('DONE!','end')
