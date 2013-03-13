@@ -1,3 +1,5 @@
 .DS_Store
 *.pyc
 *test*
+.*.swp
+todo.txt

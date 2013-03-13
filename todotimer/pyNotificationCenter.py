@@ -1,10 +1,8 @@
+# -*- coding: utf-8 -*-
 # Python integration with Mountain Lion's notification center
 # original code forked from maranas at
 # https://github.com/maranas
 #
-# todo:
-# - try deleting notification center, still works? only popup, no sidebar?
-# - find dox to figure out possible calls in NSUserNotification/Center
 
 import Foundation, objc
 
