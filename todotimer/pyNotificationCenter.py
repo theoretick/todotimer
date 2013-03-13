@@ -3,6 +3,7 @@
 # original code forked from maranas at
 # https://github.com/maranas
 #
+# Part of todotimer.py
 
 import Foundation, objc
 

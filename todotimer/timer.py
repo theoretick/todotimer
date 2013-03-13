@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 #
+# Part of todotimer.py
 # timer for tasks and breaks called from todotimer.py
 #
 

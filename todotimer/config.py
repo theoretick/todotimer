@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 #
+# part of todotimer.py
 # config settings for todotimer
 ####################
 
