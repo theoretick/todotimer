@@ -19,7 +19,7 @@ BREAKLENGTH = 10
 ####################
 
 # Support for context in todo lists (i.e. @home or @work)
-TAGSUPPORT = False
+TAGSUPPORT = True
 
 # Support for logging of previous todo lists
 LOGGING = False

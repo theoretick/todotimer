@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# Functions for added tag support
+# Part of todotimer.py
+# Function for added tag support
 # 
 
 def tags(inline):
     """ 
-      If TAGSUPPORT on, return tag
-      else, return False
+      If TAGSUPPORT on, split and return title with tag
     """
     from todotimer.config import TAGSUPPORT
 
-    if TAGSUPPORT == False:
-        return False
-
-    if '@' in inline:
+    if (TAGSUPPORT == True) & ('@' in inline):
         linelist = inline.split('@')
-        tag = linelist([len(linelist)-1]
-        return tag
+        taskname = linelist[0]
+        tasktag = linelist[1]
+        return taskname, tasktag
+    else:
+        return inline, False
