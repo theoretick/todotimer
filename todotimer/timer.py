@@ -20,7 +20,7 @@ def timer(taskname, timeslot='break'):
     if tag == False:
         tag = " "
     tasktext = """
-        {}
+        @{}
         Starting {} min counter
         """.format(tag, TASKLENGTH)
     endtext = """
