@@ -17,10 +17,12 @@ def timer(taskname, timeslot='break'):
 
     ########## init variables
     title, tag = tags(taskname)
-    if tag == False:
-        tag = " "
+    if tag:
+        tag = '@' + tag
+    else:
+        tag = ''
     tasktext = """
-        @{}
+        {}
         Starting {} min counter
         """.format(tag, TASKLENGTH)
     endtext = """
