@@ -5,14 +5,24 @@
 # 
 
 def tags(inline):
-    """ If TAGSUPPORT on, split and return title with tag
-    """
-    from todotimer.config import TAGSUPPORT
+    """ Adds Tagsupport for both Context and Project
+     If CONTEXT on, split and return title with tag
+     If PROJECT on, split and return title with tag
 
-    if (TAGSUPPORT == True) & ('@' in inline):
+    """
+    from todotimer.config import CONTEXT
+    from todotimer.config import PROJECT
+
+    if (CONTEXT == True) & ('@' in inline):
         linelist = inline.split('@')
         taskname = linelist[0]
-        tasktag = linelist[1]
-        return taskname, tasktag
+        contexttag = linelist[1]
+        projecttag = False
+        if (PROJECT == True) & ('+' in taskname):
+            linelist = taskname.split('+')
+            taskname = linelist[0]
+            projecttag = linelist[1]
+        print taskname, projecttag, contexttag
+        return taskname, projecttag, contexttag
     else:
-        return inline, False
+        return inline, False, False

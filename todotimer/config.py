@@ -21,7 +21,8 @@ SOUND = True
 ####################
 
 # Support for context in todo lists (i.e. @home or @work)
-TAGSUPPORT = True
+CONTEXT = True
+PROJECT = True
 
 # Support for logging of previous todo lists
 # CURRENTLY NONE IMPLEMENTED
