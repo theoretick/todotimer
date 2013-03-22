@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 #
+# Part of todotimer.py
 # timer for tasks and breaks called from todotimer.py
 #
 
@@ -12,12 +13,15 @@ def timer(taskname, timeslot='break'):
     from todotimer.tags import tags
     from todotimer.config import TASKLENGTH
     from todotimer.config import BREAKLENGTH
+    from todotimer.config import SOUND
     import time
 
     ########## init variables
     title, tag = tags(taskname)
-    if tag == False:
-        tag = " "
+    if tag:
+        tag = '@' + tag
+    else:
+        tag = ''
     tasktext = """
         {}
         Starting {} min counter
@@ -33,10 +37,10 @@ def timer(taskname, timeslot='break'):
 
     ########## run notification loops based on timeslot (task, end, or break)
     if timeslot == 'task':
-        pyNotificationCenter.notify(title, tasktext)
+        pyNotificationCenter.notify(title, tasktext, 0, SOUND)
         time.sleep(tasktime)
     elif timeslot== 'end':
-            pyNotificationCenter.notify(taskname, endtext)
+            pyNotificationCenter.notify(taskname, endtext, 0, SOUND)
     else:
-        pyNotificationCenter.notify('Rest!', breaktext)
+        pyNotificationCenter.notify('Rest!', breaktext, 0, SOUND)
         time.sleep(breaktime)

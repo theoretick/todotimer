@@ -5,8 +5,7 @@
 # 
 
 def tags(inline):
-    """ 
-      If TAGSUPPORT on, split and return title with tag
+    """ If TAGSUPPORT on, split and return title with tag
     """
     from todotimer.config import TAGSUPPORT
 
