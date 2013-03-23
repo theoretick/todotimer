@@ -30,5 +30,4 @@ PROJECT = True
 LOGGING = False
 
 # enable Dropbox support for todo.txt storage
-# CURRENTLY NOT IMPLEMENTED
-DROPBOX = True
+DROPBOX = False
