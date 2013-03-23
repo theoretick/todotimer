@@ -1,4 +1,5 @@
-read dhalgren @home
-watch stargate
+task +project
+read dhalgren +bookaday @home
+watch stargate +fun
 review anki @computer
 ricky b - b is for bounce

@@ -17,20 +17,22 @@ def timer(taskname, timeslot='break'):
     import time
 
     ########## init variables
-    title, tag = tags(taskname)
-    if tag:
-        tag = '@' + tag
-    else:
-        tag = ''
+    title, project, context = tags(taskname)
+    if not context:
+        context = ''
+    if not project:
+        project = ''
+
+    ##########
     tasktext = """
-        {}
+        {} {}
         Starting {} min counter
-        """.format(tag, TASKLENGTH)
+        """.format(project, context, TASKLENGTH)
     endtext = """
         Congrats, you're done for today"""
     breaktext = """
         Finished session, take a {} minute break.\n
-        Up next: {}
+        Next: {}
         """.format(BREAKLENGTH, taskname)
     tasktime = TASKLENGTH * 60
     breaktime = BREAKLENGTH * 60
