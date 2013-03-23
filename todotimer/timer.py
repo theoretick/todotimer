@@ -18,13 +18,9 @@ def timer(taskname, timeslot='break'):
 
     ########## init variables
     title, project, context = tags(taskname)
-    if context:
-        context = '@' + context
-    else:
+    if not context:
         context = ''
-    if project:
-        project = '+' + project
-    else:
+    if not project:
         project = ''
 
     ##########
@@ -36,7 +32,7 @@ def timer(taskname, timeslot='break'):
         Congrats, you're done for today"""
     breaktext = """
         Finished session, take a {} minute break.\n
-        Up next: {}
+        Next: {}
         """.format(BREAKLENGTH, taskname)
     tasktime = TASKLENGTH #* 60
     breaktime = BREAKLENGTH #* 60

@@ -1,3 +1,4 @@
+task +project
 read dhalgren +bookaday @home
 watch stargate +fun
 review anki @computer

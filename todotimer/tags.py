@@ -13,16 +13,21 @@ def tags(inline):
     from todotimer.config import CONTEXT
     from todotimer.config import PROJECT
 
-    if (CONTEXT == True) & ('@' in inline):
-        linelist = inline.split('@')
-        taskname = linelist[0]
-        contexttag = linelist[1]
-        projecttag = False
-        if (PROJECT == True) & ('+' in taskname):
-            linelist = taskname.split('+')
-            taskname = linelist[0]
-            projecttag = linelist[1]
-        print taskname, projecttag, contexttag
-        return taskname, projecttag, contexttag
-    else:
-        return inline, False, False
+    if (CONTEXT == True) or (PROJECT == True):
+        linelist = inline.split()        
+        if '@' in linelist[-1]:
+            contexttag = linelist.pop(-1)
+        elif '@' in linelist[-2]:
+            contexttag = linelist.pop(-2)
+        else:
+            contexttag = False
+
+        if '+' in linelist[-1]:
+            projecttag = linelist.pop(-1)
+        elif '+' in linelist[-2]:
+            projecttag = linelist.pop(-2)
+        else:
+            projecttag = False
+        return " ".join(linelist[:]), projecttag, contexttag
+
+    return inline, False, False
