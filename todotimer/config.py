@@ -20,7 +20,7 @@ SOUND = True
 # Advanced features
 ####################
 
-# Support for context in todo lists (i.e. @home or @work, +cleanhouse or +findjob)
+# Support for TAGS in todo lists (i.e. @home or @work, +cleanhouse or +findjob)
 # - context or project MUST be last on line (order of each not important)
 CONTEXT = True
 PROJECT = True
