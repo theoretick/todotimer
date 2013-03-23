@@ -6,20 +6,20 @@ At start/end of session pushes notifications to OSX's Notification Center.
 
 ### Usage ###
 
-Run timer.py in folder containing todo.txt. Program pulls items line-by-line
-at task time interval specified (default 25min with 5min breaks) in config file.
+Run timer.py in folder containing _"todo.txt"_. Program pulls items line-by-line
+at time intervals specified (default 25min with 5min breaks) in config file.
 
 Formatting is dead simple. Example todo:
-    read dhalgren +chapteraday @home
-    watch stargate
-    review anki @computer
-    work on resume +findajob
+     read dhalgren +chapteraday @home  
+     watch stargate  
+     review anki @computer  
+     work on resume +findajob  
 
-Format matches [todo.txt app](http://todotxt.com) style:
+Tag format matches [todo.txt app](http://todotxt.com) style:
  - @ marks context (where you need to be to do X)
  - + marks project (what project X belongs to)
 
-_Tags must go at END of line_
+**Tags must go at END of line**
 
 ### Todo ###
 
