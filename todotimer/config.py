@@ -4,8 +4,8 @@
 # config settings for todotimer
 ####################
 
-# todo.txt filepath
-FILEPATH = 'todo.txt'
+# todo.txt default name and filepath
+FILENAME = 'todo.txt'
 
 # specify the length of a task session (default 25)
 TASKLENGTH = 25
@@ -26,5 +26,8 @@ CONTEXT = True
 PROJECT = True
 
 # Support for logging of previous todo lists
-# CURRENTLY NONE IMPLEMENTED
+# CURRENTLY NOT IMPLEMENTED
 LOGGING = False
+
+# enable Dropbox support for todo.txt storage
+DROPBOX = False
