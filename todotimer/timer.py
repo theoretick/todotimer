@@ -11,38 +11,37 @@ def timer(taskname, timeslot='break'):
     """
     from todotimer import pyNotificationCenter
     from todotimer.tags import tags
-    from todotimer.config import TASKLENGTH
-    from todotimer.config import BREAKLENGTH
-    from todotimer.config import SOUND
-    import time
+    from todotimer import config
+    from time import sleep
 
     ########## init variables
+    # Parse task from project or context
     title, project, context = tags(taskname)
     if not context:
         context = ''
     if not project:
         project = ''
 
-    ##########
+    ########## main
     tasktext = """
         {} {}
         Starting {} min counter
-        """.format(project, context, TASKLENGTH)
+        """.format(project, context, config.TASKLENGTH)
     endtext = """
         Congrats, you're done for today"""
     breaktext = """
         Finished session, take a {} minute break.\n
         Next: {}
-        """.format(BREAKLENGTH, taskname)
-    tasktime = TASKLENGTH #* 60
-    breaktime = BREAKLENGTH #* 60
+        """.format(config.BREAKLENGTH, taskname)
+    tasktime = config.TASKLENGTH #* 60
+    breaktime = config.BREAKLENGTH #* 60
 
     ########## run notification loops based on timeslot (task, end, or break)
     if timeslot == 'task':
-        pyNotificationCenter.notify(title, tasktext, 0, SOUND)
-        time.sleep(tasktime)
+        pyNotificationCenter.notify(title, tasktext, 0, config.SOUND)
+        sleep(tasktime)
     elif timeslot== 'end':
-            pyNotificationCenter.notify(taskname, endtext, 0, SOUND)
+        pyNotificationCenter.notify(taskname, endtext, 0, config.SOUND)
     else:
-        pyNotificationCenter.notify('Rest!', breaktext, 0, SOUND)
-        time.sleep(breaktime)
+        pyNotificationCenter.notify('Rest!', breaktext, 0, config.SOUND)
+        sleep(breaktime)

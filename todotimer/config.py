@@ -25,9 +25,9 @@ SOUND = True
 CONTEXT = True
 PROJECT = True
 
+# enable Dropbox support for todo.txt storage
+DROPBOX = False
+
 # Support for logging of previous todo lists
 # CURRENTLY NOT IMPLEMENTED
 LOGGING = False
-
-# enable Dropbox support for todo.txt storage
-DROPBOX = False
