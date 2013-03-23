@@ -21,14 +21,14 @@
 ##################################################
 
 from todotimer.timer import timer
-from todotimer.config import FILEPATH
+from todotimer.todofinder import todofinder
 
 if __name__=="__main__":
     try:
-        infile = open(FILEPATH)
+        infile = open(todofinder())
         inputline = infile.readline()
     except:
-        raise InputError, "Error, no todo.txt found"
+        raise IOError, "Error, no todo.txt found"
         exit()
 
     while inputline:
