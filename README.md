@@ -1,7 +1,6 @@
 ## Todo Timer ##
 
 A simple pomodoro-style todo timer that pulls items from todo.txt
-
 At start/end of session pushes notifications to OSX's Notification Center.
 
 ### Usage ###
@@ -9,13 +8,15 @@ At start/end of session pushes notifications to OSX's Notification Center.
 Run timer.py in folder containing _"todo.txt"_. Program pulls items line-by-line
 at time intervals specified (default 25min with 5min breaks) in config file.
 
-Formatting is dead simple. Example todo file:  
+Formatting is dead simple.  
+
+Example todo.txt:  
 >  read dhalgren +chapteraday @home  
 >  watch stargate  
 >  review anki @computer  
 >  work on resume +findajob  
 
-Tag format matches [todo.txt app](http://todotxt.com) style:
+Tag formatting matches popular [todo.txt](http://todotxt.com) style:
  - @ marks context (where you need to be to do X)
  - + marks project (what project X belongs to)
 
@@ -27,4 +28,4 @@ Tag format matches [todo.txt app](http://todotxt.com) style:
  - Add parsing for daily todos (i.e. todo2mar2013.txt) and date matching
  - Add scanning of common todo folders (i.e. Dropbox)
 	- Add iCloud support...?
- - Integrate with todo.txt project
+ - add integration for todo.txt app
