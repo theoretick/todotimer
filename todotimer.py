@@ -9,15 +9,6 @@
 # - assigns session time to each line (task) from infile
 # - notifies task start and break
 # - rinse, repeat
-#------------------------------
-# - FUTURE - keep logs
-# - FUTURE - parse filename for matching date (ex todo2mar2012.txt)
-# - FUTURE - pull todo from XXXXX?? cool!
-#       i.e. iCloud, evernote, dropbox, etc.
-##################################################
-# fix:
-# - better format break, bold "up next?"
-# - should break/task be separate functions?
 ##################################################
 
 from todotimer.timer import timer
